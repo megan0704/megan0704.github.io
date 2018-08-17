@@ -12,7 +12,7 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(255);
   noStroke();
   posx+=0.5;
   birdx=posx+stop
