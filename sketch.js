@@ -7,9 +7,11 @@ var speed=2;
 var img;
 var manY;
 var y=0;;
+var song;
 
  function preload() {
    img = loadImage('man1.png');
+   song = loadSound('male.mp3');
    console.log(img);
    //print(load);
  }
@@ -52,6 +54,7 @@ function draw() {
  function touchStart(){
   // if(value ===0){
     stop-=20;
+    song.play();
    
     // print("b");
   // }else{
@@ -62,5 +65,6 @@ function draw() {
 
 function mousePressed(){
   stopspeed-=10;
+  song.play();
   //print(stop);
 }
