@@ -4,13 +4,23 @@ var width,height;
 var value = 0;
 var birdx=0;
 var speed=2;
+var img;
+
+
+function preload() {
+  img = loadImage('DPI1.jpg');
+}
+
+
 
 function setup() {
   width=400;
   height=400;
   createCanvas(width, height);
+  image(img, 0, 0);
 
 }
+
 
 function draw() {
   background(220);
