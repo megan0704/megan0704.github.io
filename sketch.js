@@ -26,12 +26,17 @@ function draw() {
 }
 
 function touchStart(){
-  if(value ===0){
+  // if(value ===0){
     stop-=5;
-    value = 255;
-    print("b");
-  }else{
-    stop=0;
-    value = 0;
-  }
+   
+    // print("b");
+  // }else{
+  //   stop=0;
+  //   value = 0;
+  // }
 }
+
+// function mousePressed(){
+//   stop-=5;
+//   //print(stop);
+// }
