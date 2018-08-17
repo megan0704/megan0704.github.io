@@ -8,7 +8,7 @@ var img;
 
 
 function preload() {
-  img = loadImage('DP1.png');
+//   img = loadImage('DP1.png');
   print(load);
 }
 
@@ -18,7 +18,7 @@ function setup() {
   width=400;
   height=400;
   createCanvas(width, height);
-  image(img, 0, 0);
+//   image(img, 0, 0);
 
 }
 
