@@ -31,6 +31,7 @@ function draw() {
   birdx=posx+stopspeed;
     posx+=speed;
   }else{
+     background(242,156,177);
     }
   //fill(0);
   ellipse(birdx,200,50,50);
