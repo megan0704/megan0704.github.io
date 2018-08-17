@@ -8,7 +8,7 @@ var img;
 
 
  function preload() {
-   img = loadImage('DP1.png');
+   img = loadImage('man1.png');
    console.log(img);
    //print(load);
  }
