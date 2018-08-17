@@ -1,24 +1,37 @@
-// Move your finger across the page
-// to change its value 
+var posx,stop;
+var width,height;
 var value = 0;
-function draw() { 
-  fill(value); 
-  rect(25, 25, 50, 50); 
-} 
-// function touchMoved() { 
-//   value = value + 5; 
-//   if (value > 255) { 
-//     value = 0; 
-//   } 
-// }
-function touchStarted() { 
-  if (value === 0) { 
-    value = 255; } 
-  else { value = 0; 
-       } 
+var birdx=0;
+
+function setup() {
+  width=400;
+  height=400;
+  createCanvas(width, height);
+  posx=0;
+  stop=0;
 }
-// function touchStarted() { 
-//   ellipse(mouseX, mouseY, 5, 5); 
-//   // prevent default 
-//   return false; 
-// }
+
+function draw() {
+  background(220);
+  noStroke();
+  posx+=0.5;
+  birdx=posx+stop
+  
+  ellipse(birdx,200,50);
+  ellipse(400-birdx,200,50);
+  //print(birdx);
+  //test touch
+
+
+}
+
+function touchStart(){
+  if(value ===0){
+    stop-=5;
+    value = 255;
+    print("b");
+  }else{
+    stop=0;
+    value = 0;
+  }
+}
