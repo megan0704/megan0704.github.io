@@ -18,4 +18,7 @@ function touchStarted() {
        } 
 }
 // function touchStarted() { 
-//   ellipse(mouseX, mouse
+//   ellipse(mouseX, mouseY, 5, 5); 
+//   // prevent default 
+//   return false; 
+// }
