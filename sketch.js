@@ -8,7 +8,7 @@ var img;
 
 
 function preload() {
-  img = loadImage('DPI1.jpg');
+  img = loadImage('DP1.jpg');
 }
 
 
