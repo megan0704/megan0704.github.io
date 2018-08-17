@@ -17,8 +17,8 @@ var manY;
 
 
 function setup() {
-  width=750;
-  height=1334;
+  width=1200;
+  height=400;
   createCanvas(width, height);
   manY=height/2;
    //image(img, 0, 0);
