@@ -21,6 +21,8 @@ function draw() {
   ellipse(400-birdx,200,50);
   //print(birdx);
   //test touch
+  
+  rect(200,200,50,50);
 
 
 }
