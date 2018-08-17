@@ -5,6 +5,7 @@ var value = 0;
 var birdx=0;
 var speed=2;
 var img;
+var manY;
 
 
  function preload() {
@@ -19,6 +20,7 @@ function setup() {
   width=750;
   height=1334;
   createCanvas(width, height);
+  manY=height/2;
    //image(img, 0, 0);
 }
 
@@ -34,13 +36,14 @@ function draw() {
      background(242,156,177);
     }
   //fill(0);
-  image(img,birdx,height/2);
-  image(img,width-birdx,height/2);
+  image(img,birdx,manY);
+  image(img,width-birdx,manY);
   //ellipse(birdx,200,50,50);
   //ellipse(width-birdx,200,50,50);
   print(birdx);
   //test touch
-
+  manY=200+sin(y)*10;
+  y +=0.1;
 
 }
 
