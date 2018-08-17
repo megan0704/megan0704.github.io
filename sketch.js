@@ -4,7 +4,7 @@ var value = 0;
 var birdx=0;
 
 function setup() {
-  width=400;
+  width=800;
   height=400;
   createCanvas(width, height);
   posx=0;
