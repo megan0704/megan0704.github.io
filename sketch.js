@@ -7,9 +7,9 @@ var speed=2;
 var img;
 
 
-// function preload() {
-//   img = loadImage('DP1.png');
-// }
+function preload() {
+  img = loadImage('DP1.png');
+}
 
 
 
@@ -17,7 +17,7 @@ function setup() {
   width=400;
   height=400;
   createCanvas(width, height);
-  //image(img, 0, 0);
+  image(img, 0, 0);
 
 }
 
