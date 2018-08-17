@@ -1,8 +1,9 @@
 var posx=0
-var stop=0;
+var stopspeed=0;
 var width,height;
 var value = 0;
 var birdx=0;
+var speed=2;
 
 function setup() {
   width=400;
@@ -16,18 +17,15 @@ function draw() {
   noStroke();
   
   if(birdx<width/2){
-  birdx=posx+stop;
-    posx+=2;
+  birdx=posx+stopspeed;
+    posx+=speed;
   }else{
-    pox=0;
-    posx+=2}
+    }
   //fill(0);
   ellipse(birdx,200,50,50);
- // ellipse(400-birdx,200,50,100);
-  //print(birdx);
+  ellipse(width-birdx,200,50,50);
+  print(birdx);
   //test touch
-  
-  rect(200,200,50,50);
 
 
 }
@@ -44,6 +42,6 @@ function draw() {
  }
 
 function mousePressed(){
-  stop-=10;
+  stopspeed-=10;
   //print(stop);
 }
