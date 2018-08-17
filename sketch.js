@@ -42,7 +42,7 @@ function draw() {
   //ellipse(width-birdx,200,50,50);
   print(birdx);
   //test touch
-  manY=200+sin(y)*10;
+  manY=height/2+sin(y)*50;
   y +=0.1;
 
 }
