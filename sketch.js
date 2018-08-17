@@ -5,24 +5,25 @@ var value = 0;
 var birdx=0;
 var speed=2;
 var img;
-var manY;
+var manY,wmanY;
 var y=0;;
 var song;
+var millisecond
 
  function preload() {
    img = loadImage('man1.png');
-   song = loadSound('male.mp3');
+   song = loadSound('ya.mp3');
    console.log(img);
    //print(load);
  }
 
 
 function setup() {
-  width=1200;
+  width=1000;
   height=400;
   createCanvas(width, height);
   manY=height/2;
-   //image(img, 0, 0);
+  millisecond = millis();
 }
 
 
@@ -38,14 +39,15 @@ function draw() {
     }
 
   manY=180+sin(y)*10;
+  wmanY=180+cos(y)*10;
   y +=0.1;
-  console.log(manY);
+  //console.log(manY);
     
   image(img,birdx,manY);
-  image(img,width-birdx,manY);
+  image(img,width-birdx,wmanY);
   //ellipse(birdx,200,50,50);
   //ellipse(width-birdx,200,50,50);
-  print(birdx);
+  //print(birdx);
   //test touch
   
 
@@ -55,7 +57,7 @@ function draw() {
   // if(value ===0){
     stop-=20;
     song.play();
-   
+    console.log("sound");
     // print("b");
   // }else{
   //   stop=0;
@@ -64,7 +66,7 @@ function draw() {
  }
 
 function mousePressed(){
-  stopspeed-=10;
+  stopspeed-=20;
   song.play();
   //print(stop);
 }
