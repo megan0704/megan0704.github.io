@@ -1,4 +1,5 @@
-var posx,stop;
+var posx=0
+var stop=0;
 var width,height;
 var value = 0;
 var birdx=0;
@@ -7,19 +8,17 @@ function setup() {
   width=400;
   height=400;
   createCanvas(width, height);
-  background(220);
-  posx=0;
-  stop=0;
+
 }
 
 function draw() {
   background(220);
   noStroke();
-  posx+=0.5;
+  posx+=2
   birdx=posx+stop
-  fill(0);
-  ellipse(birdx,200,50);
-  ellipse(400-birdx,200,50);
+  //fill(0);
+  ellipse(birdx,200,50,100);
+ // ellipse(400-birdx,200,50,100);
   //print(birdx);
   //test touch
   
@@ -30,7 +29,7 @@ function draw() {
 
  function touchStart(){
   // if(value ===0){
-    stop-=5;
+    stop-=10;
    
     // print("b");
   // }else{
@@ -39,7 +38,7 @@ function draw() {
   // }
  }
 
-// function mousePressed(){
-//   stop-=5;
-//   //print(stop);
-// }
+function mousePressed(){
+  stop-=5;
+  //print(stop);
+}
