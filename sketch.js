@@ -4,9 +4,10 @@ var value = 0;
 var birdx=0;
 
 function setup() {
-  width=800;
+  width=200;
   height=400;
   createCanvas(width, height);
+  background(220);
   posx=0;
   stop=0;
 }
@@ -23,11 +24,11 @@ function draw() {
   //test touch
   
   rect(200,200,50,50);
-//
+
 
 }
 
-function touchStart(){
+ function touchStart(){
   // if(value ===0){
     stop-=5;
    
@@ -36,7 +37,7 @@ function touchStart(){
   //   stop=0;
   //   value = 0;
   // }
-}
+ }
 
 // function mousePressed(){
 //   stop-=5;
