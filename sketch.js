@@ -14,10 +14,15 @@ function setup() {
 function draw() {
   background(220);
   noStroke();
-  posx+=2
-  birdx=posx+stop
+  
+  if(birdx<width/2){
+  birdx=posx+stop;
+    posx+=2;
+  }else{
+    pox=0;
+    posx+=2}
   //fill(0);
-  ellipse(birdx,200,50,100);
+  ellipse(birdx,200,50,50);
  // ellipse(400-birdx,200,50,100);
   //print(birdx);
   //test touch
@@ -39,6 +44,6 @@ function draw() {
  }
 
 function mousePressed(){
-  stop-=5;
+  stop-=10;
   //print(stop);
 }
