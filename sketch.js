@@ -1,63 +1,106 @@
-var posx=0
+var posx=0;
 var stopspeed=0;
 var width,height;
 var value = 0;
-var birdx=0;
+var manx=0;
 var speed=2;
-var img;
+var mimg,winimg,kissimg;
 var manY,wmanY;
 var y=0;;
-var song;
-var millisecond
+var song,kiss;
+var millisecond,bgm;
+var gaptime,stime,etime;
+
+var againBtn = document.querySelector('.again-btn');
+if (againBtn) {
+        againBtn.addEventListener('click', function() {
+        window.location.reload(true);
+    });
+}
+
+function showBtn() {
+    console.log(againBtn);
+    againBtn.classList.add("show");
+}
 
  function preload() {
-   img = loadImage('man1.png');
+   mimg = loadImage('man1.png');
+   wimg = loadImage('wman1.png');
+   kissimg  = loadImage('kiss.png');
+    winimg  = loadImage('win.png'); 
+  // endimg = loadImage('end.png');
    song = loadSound('ya.mp3');
-   console.log(img);
+   kiss= loadSound('kisssound.mp3');
+   bgm= loadSound('bgm.mp3');
+   //console.log(img);
+   //console.log(img);
    //print(load);
  }
 
 
 function setup() {
-  width=1000;
-  height=400;
-  createCanvas(width, height);
+  var canvas = createCanvas(windowWidth, windowHeight);
+  canvas.parent("container");
   manY=height/2;
-  millisecond = millis();
+  stime = millis();
+  
 }
 
 
 function draw() {
-  background(220);
+//    bgm.play();
+   // 
+//    console.log(millis());
+  background(255,226,0);
   noStroke();
+  etime = millis();
+  gaptime = etime-stime;
+  //print(gaptime);
   
-  if(birdx<width/2){
-    birdx=posx+stopspeed;
+if(gaptime<7000){
+    if(manx<width/2-20){
+    manx=posx+stopspeed;
     posx+=speed;
-  }else{
-     background(242,156,177);
+  }
+    else{
+     //lose
+     //background(0);  
+     kiss.play();
+     noLoop();
+     image(kissimg,0,0);
+        showBtn();
     }
+}else{
+    //win
+    background(255);
+    
+    image(winimg,0,0);
+    
+    
+    showBtn();
+}
+  
 
   manY=180+sin(y)*10;
   wmanY=180+cos(y)*10;
-  y +=0.1;
+  y +=0.05;
   //console.log(manY);
     
-  image(img,birdx,manY);
-  image(img,width-birdx,wmanY);
+  
+  image(wimg,width-manx,wmanY);
+  image(mimg,manx,manY);
   //ellipse(birdx,200,50,50);
   //ellipse(width-birdx,200,50,50);
   //print(birdx);
   //test touch
   
-
 }
 
  function touchStart(){
   // if(value ===0){
     stop-=20;
     song.play();
-    console.log("sound");
+    kiss.play();
     // print("b");
   // }else{
   //   stop=0;
@@ -66,7 +109,9 @@ function draw() {
  }
 
 function mousePressed(){
+    
   stopspeed-=20;
+    //kiss.play();
   song.play();
   //print(stop);
 }
