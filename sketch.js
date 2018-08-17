@@ -16,8 +16,8 @@ var img;
 
 
 function setup() {
-  width=400;
-  height=400;
+  width=750;
+  height=1334;
   createCanvas(width, height);
    //image(img, 0, 0);
 }
@@ -34,7 +34,8 @@ function draw() {
      background(242,156,177);
     }
   //fill(0);
-  image(img,birdx,200);
+  image(img,birdx,height/2);
+  image(img,width-birdx,height/2);
   //ellipse(birdx,200,50,50);
   //ellipse(width-birdx,200,50,50);
   print(birdx);
