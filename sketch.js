@@ -67,7 +67,7 @@ if(gaptime<7000){
      //background(0);  
      kiss.play();
      noLoop();
-     image(kissimg,0,0);
+     image(kissimg,width/2-kissimg/2,50);
         showBtn();
     }
 }else{
