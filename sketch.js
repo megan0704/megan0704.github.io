@@ -1,8 +1,10 @@
+
+
 var flock;
 
 function setup() {
   createCanvas(640,360);
-  createP("Drag the mouse to generate new boids.");
+  //createP("Drag the mouse to generate new boids.");
   
   flock = new Flock();
   // Add an initial set of boids into the system
@@ -22,7 +24,7 @@ function draw() {
 //   flock.addBoid(new Boid(mouseX,mouseY));
 // }
 function touchStarted(){
-  flock.addBoid(new Boid(mouseX,mouseY));
+  flock.addBoid(new Boid(320,180));
 }
 // The Nature of Code
 // Daniel Shiffman
@@ -55,7 +57,7 @@ Flock.prototype.addBoid = function(b) {
 
 function Boid(x,y) {
   this.acceleration = createVector(0,0);
-  this.velocity = createVector(random(-1,1),2);
+  this.velocity = createVector(random(-1,1),-5);
   this.position = createVector(x,y);
   this.r = 2.0;
   this.maxspeed = 1;    // Maximum speed
@@ -217,3 +219,5 @@ Boid.prototype.cohesion = function(boids) {
     return createVector(0,0);
   }
 }
+
+
