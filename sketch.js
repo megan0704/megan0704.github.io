@@ -9,6 +9,7 @@ var img;
 
 function preload() {
   img = loadImage('DP1.png');
+  print(load);
 }
 
 
