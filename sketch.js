@@ -36,14 +36,15 @@ function draw() {
      background(242,156,177);
     }
   //fill(0);
+  manY=height/2+sin(y)*50;
+  y +=0.01;
   image(img,birdx,manY);
   image(img,width-birdx,manY);
   //ellipse(birdx,200,50,50);
   //ellipse(width-birdx,200,50,50);
   print(birdx);
   //test touch
-  manY=height/2+sin(y)*50;
-  y +=0.1;
+  
 
 }
 
