@@ -7,10 +7,10 @@ var speed=2;
 var img;
 
 
-function preload() {
-//   img = loadImage('DP1.png');
-  print(load);
-}
+// function preload() {
+// //   img = loadImage('DP1.png');
+//   print(load);
+// }
 
 
 
