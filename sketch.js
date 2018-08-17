@@ -1,31 +1,12 @@
-//https://p5js.org
-
-//03_Colorlines (Exercise 01)
-//Link all circles with individual lines
-//Color of the line is the mix of the circle colors
-
-//Initialization function
-
-function setup() {
-  //Set the size of rendering window - pixels
-  createCanvas(500, 500);
-  noStroke();
+// Touch within the image to change // the value of the rectangle 
+var value = 0; 
+function draw() { 
+  fill(value); rect(25, 25, 50, 50); } 
+function touchStarted() { 
+  if (value === 0) { value = 255; } 
+  else { value = 0; } 
 }
-//Rendering function
-function draw()
-{
-  background(255);
-  //Erase all canvas. Set the color to white
-
-  push();
-  translate(mouseX, mouseY);
-  fill(0, 255, 0);
-  rect(0,0, 500,500);
-  pop();
-
-  // translate(mouseX+80, mouseY+ 80);
-  translate(50, 50);
-     fill(255,0,0);
-     rect(0,0, 500,500);
-
+function touchStarted() { 
+  ellipse(mouseX, mouseY, 5, 5); 
+  // prevent default return false; 
 }
