@@ -16,7 +16,7 @@ function draw() {
   noStroke();
   posx+=0.5;
   birdx=posx+stop
-  
+  fill(0);
   ellipse(birdx,200,50);
   ellipse(400-birdx,200,50);
   //print(birdx);
