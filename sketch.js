@@ -6,14 +6,13 @@ var birdx=0;
 var speed=2;
 var img;
 var manY;
-
+var y=0;;
 
  function preload() {
    img = loadImage('man1.png');
    console.log(img);
    //print(load);
  }
-
 
 
 function setup() {
@@ -30,14 +29,16 @@ function draw() {
   noStroke();
   
   if(birdx<width/2){
-  birdx=posx+stopspeed;
+    birdx=posx+stopspeed;
     posx+=speed;
   }else{
      background(242,156,177);
     }
-  //fill(0);
-  manY=height/2+sin(y)*50;
-  y +=0.01;
+
+  manY=180+sin(y)*10;
+  y +=0.1;
+  console.log(manY);
+    
   image(img,birdx,manY);
   image(img,width-birdx,manY);
   //ellipse(birdx,200,50,50);
@@ -50,7 +51,7 @@ function draw() {
 
  function touchStart(){
   // if(value ===0){
-    stop-=10;
+    stop-=20;
    
     // print("b");
   // }else{
